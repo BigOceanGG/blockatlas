@@ -6,7 +6,8 @@ gin:
 # If all - run all platforms in one binary. You can pick specific coin handle to run binary only with specific coin
 # Example: ethereum
 # You can see all the coin handles at coins/coins.yml file
-platform: [ all ]
+#platform: [ all ]
+platform: ethereum
 
 # The transaction watcher
 observer:
@@ -22,7 +23,7 @@ observer:
     url: amqp://localhost:5672
 
 postgres:
-  url: postgresql://user:pass@localhost/blockatlas?sslmode=disable
+  url: postgresql://admin:admin@localhost/blockatlas?sslmode=disable
   log: false
 
 consumer:

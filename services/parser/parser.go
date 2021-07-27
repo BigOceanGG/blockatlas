@@ -307,6 +307,12 @@ func getBlockByNumberWithRetry(attempts int, sleep time.Duration, getBlockByNumb
 			time.Sleep(sleep)
 			return getBlockByNumberWithRetry(attempts, sleep*2, getBlockByNumber, n, symbol)
 		}
+	} else {
+		log.WithFields(log.Fields{
+			"number":   n,
+			"attempts": 5 - attempts,
+			"txs":      len(r.Txs)},
+		).Info("Fetch blocks")
 	}
 	return r, err
 }

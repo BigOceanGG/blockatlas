@@ -73,7 +73,7 @@ func GetTokensByAddressV3(c *gin.Context, instance tokenindexer.Instance) {
 // @Produce json
 // @Tags Transactions
 // @Param from query int true "unix timestamp"
-// @Success 200 {object} tokenindexer.Response
+// @Success 200 {object} blockatlas.ResultsResponse
 // @Router /v3/tokens/new [get]
 func GetNewTokens(c *gin.Context, instance tokenindexer.Instance) {
 	var request tokenindexer.Request
